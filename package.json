@@ -1,0 +1,24 @@
+{
+    "name": "ui-automation",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "testCases": "npx cypress run --spec ./cypress/e2e/**/MakeAppointment.cy.js --reporter mocha-allure-reporter",
+        "allureClear": "rm -R -f allure-results && mkdir allure-results",
+        "allureReport": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+        "reports": "npx allure serve allure-results",
+        "final:test-allure": "npm run allureClear && npm run testCases && npm run allureReport && npm run reports"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@4tw/cypress-drag-drop": "^2.2.3",
+        "@shelex/cypress-allure-plugin": "^2.34.1",
+        "allure-commandline": "^2.20.1",
+        "cypress": "^13.4.0",
+        "cypress-cucumber-preprocessor": "^4.3.1",
+        "mocha-allure-reporter": "^1.4.0"
+    }
+}

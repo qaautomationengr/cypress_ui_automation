@@ -1,0 +1,22 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1714771260321' stop='1714771271368'>
+    <name>My First Test</name>
+    <title>My First Test</title>
+    <test-cases>
+        <test-case start='1714771264494' status='failed' stop='1714771271360'>
+            <name>Login Page</name>
+            <title>Login Page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying after 4000ms: Expected to find element: `#btn-book-appointmentx`, but never found it.</message>
+                <stack-trace>AssertionError: Timed out retrying after 4000ms: Expected to find element: `#btn-book-appointmentx`, but never found it.
+                    at MakeAppointmentElements.appointmentBookAppointmentButton (webpack://ui-automation/./pageobjects/pageelements/MakeAppointment.js:36:18)
+                    at MakeAnAppointment.makeAppointmentPage (webpack://ui-automation/./pageobjects/pageactions/MakeAppointment.js:25:27)
+                    at Context.eval (webpack://ui-automation/./cypress/e2e/MakeAppointment.cy.js:13:28)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
